@@ -26,7 +26,10 @@ class ProductDetail extends Component {
       price,
       variant_groups: variantGroups,
     } = this.props.product;
-    const soldOut = this.props.product.is.sold_out;
+
+    const soldOut = false;
+    // const soldOut = this.props.product.is.sold_out;
+
     const { selectedOptions } = this.state;
     const reg = /(<([^>]+)>)/ig;
 

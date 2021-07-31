@@ -13,18 +13,21 @@ import Footer from '../../components/common/Footer';
 import SocialMedia from '../../components/common/SocialMedia';
 import CategoryList from '../../components/products/CategoryList';
 import reduceProductImages from '../../lib/reduceProductImages';
+import ProductCard from '../../components/products/ProductCard';
 
 const detailView = `<p>
   Slightly textured fabric with tonal geometric design and a bit of shine
 </p>`;
 
-export default function Product() {
+export default function Product({product}) {
   const router = useRouter();
   const { permalink } = router.query;
   const [showShipping, setShowShipping] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // const [product, setProduct] = useState(null);
+  // const [loading, setLoading] = useState(true);
+
+  console.log(permalink)
 
   const toggleShipping = () => {
     setShowShipping(!showShipping);
@@ -33,34 +36,21 @@ export default function Product() {
   const toggleDetails = () => {
     setShowDetails(!showDetails);
   }
+  // permalink = product.permalink
+  // setProduct(product_data);
+  // setLoading(false);
 
-  useEffect(() => {
-    if (!permalink) {
-      return;
-    }
-
-    const fetchProductByPermalink = async (permalink) => {
-      try {
-        const product = await commerce.products.retrieve(permalink, { type: 'permalink '});
-        setProduct(product);
-        setLoading(false);
-      } catch (error) {
-        setLoading(false);
-      }
-    };
-
-    fetchProductByPermalink(permalink);
-  }, [permalink]);
-
-  if (loading) {
-    return <TemplatePage page={ {message: 'Loading...'} } />
-  }
+  // if (loading) {
+  //   return <TemplatePage page={ {message: 'Loading...'} } />
+  // }
 
   if (product === null) {
     return <ErrorPage statusCode={404} />
   }
 
-  const images = reduceProductImages(product);
+  const images = product.media;
+  // const images = reduceProductImages(product);
+
   return (
     <Root>
       <Head>
@@ -136,4 +126,29 @@ export default function Product() {
     <Footer />
   </Root>
   );
+}
+
+export async function getStaticPaths(){
+  var products = require('./../../seeds/products.json');
+  // const { products } = this.props;
+  let paths = products.map(p => {
+    return `/product/${p.permalink}`
+  })
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }){
+  var products = require('./../../seeds/products.json');
+
+  let product = products.find(products => products.permalink === params.permalink)
+
+  return {
+    props:{
+      product,
+    }
+  }
 }
