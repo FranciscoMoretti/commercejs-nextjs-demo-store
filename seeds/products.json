@@ -1,33 +1,18 @@
 [
   {
-    "product": {
-      "id": "000000001",
-      "name": "Face & Body Roller",
-      "description": "Enrich your morning and evening beauty ritual and to help reduce the appearance of puffiness and wrinkles",
-      "price": "18.00",
-      "categories": ["facial-products"],
-      "category_id": "categories[2].id",
-      "permalink": "face_body_roller",
-      "media":{
-        "filename": "roller-3.jpg",
-        "url": "https://cdn.chec.io/merchants/17851/assets/F1t7AVOogO3VZoxE|roller-3.jpg",
-        "source": "https://cdn.chec.io/merchants/17851/assets/F1t7AVOogO3VZoxE|roller-3.jpg"
-      }
-    },
-    "variant": [
-      {
-        "name": "Size",
-        "options": [
-          {
-            "description": "200ml",
-            "price": "0.00"
-          },
-          {
-            "description": "500ml",
-            "price": "34.00"
-          }
-        ]
-      }
-    ]
+    "id": "000000001",
+    "name": "Face & Body Roller",
+    "description": "Enrich your morning and evening beauty ritual and to help reduce the appearance of puffiness and wrinkles",
+    "price": "18.00",
+    "categories": [
+      "facial-products"
+    ],
+    "category_id": "categories[2].id",
+    "permalink": "face_body_roller",
+    "media": {
+      "filename": "roller-3.jpg",
+      "url": "https://cdn.chec.io/merchants/17851/assets/F1t7AVOogO3VZoxE|roller-3.jpg",
+      "source": "https://cdn.chec.io/merchants/17851/assets/F1t7AVOogO3VZoxE|roller-3.jpg"
+    }
   }
 ]
