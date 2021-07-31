@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import commerce from '../../lib/commerce';
 import { Collapse } from 'react-collapse';
 import Head from 'next/head';
 import ErrorPage from 'next/error'

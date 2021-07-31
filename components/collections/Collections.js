@@ -82,12 +82,16 @@ class Collections extends Component {
    */
   filterProductsByCat(catSlug) {
     const { categories, products } = this.props;
+    console.log(catSlug);
 
+    console.log(categories);
     const cat = categories.find(category => category.slug === catSlug);
     if (!cat) {
       return [];
     }
-    return products.filter(product => product.categories.find(productCategory => productCategory.id === cat.id));
+    console.log(cat);
+    console.log(products);
+    return products.filter(productGroup => productGroup.product.categories.find(productCategory => productCategory.id === cat.id));
   }
 
   /**
@@ -105,15 +109,16 @@ class Collections extends Component {
                 {category.name}
               </p>
               <div className="row mb-5 collection-1">
-                { this.filterProductsByCat(category.slug).map(product => (
-                  <div key={product.id} className="col-6 col-sm-4 col-md-3">
+                { console.log(categories.slug)}
+                {this.filterProductsByCat(category.slug).map(product_group => (
+                  <div key={product_group.product.id} className="col-6 col-sm-4 col-md-3">
                     <ProductCard
-                      permalink={product.permalink}
-                      image={product.media.source}
-                      name={product.name}
-                      price={product.price.formatted_with_symbol}
-                      description={product.description && product.description.replace(reg, '')}
-                      soldOut={product.is.sold_out}
+                      permalink={product_group.product.permalink}
+                      image={product_group.product.media.source}
+                      name={product_group.product.name}
+                      description={product_group.product.description && product_group.product.description.replace(reg, '')}
+                      soldOut={false}
+                      // soldOut={product_group.product.is.sold_out}
                     />
                   </div>
                 ))}

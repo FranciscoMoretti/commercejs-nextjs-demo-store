@@ -6,7 +6,6 @@ import thunk from 'redux-thunk';
 import {
   STORE_PRODUCTS,
   STORE_CATEGORIES,
-  RETRIEVE_CART_SUCCESS,
   ADD_TO_CART_SUCCESS,
   UPDATE_CART_ITEM_SUCCESS,
   REMOVE_FROM_CART_SUCCESS,
@@ -25,16 +24,6 @@ let store
 const initialState = {
   categories: [],
   products: [],
-  cart: {},
-  checkout: {
-    shippingOptions: [],
-    checkoutTokenObject: {},
-  },
-  orderReceipt: null,
-  customer: null,
-  loading: {
-    customer: true,
-  },
 };
 
 // Create reducer
@@ -65,10 +54,6 @@ const reducer = (state = initialState, action) => {
       return { ...state, customer: null, loading: { ...state.loading, customer: false } };
     case SET_CUSTOMER:
       return { ...state, customer: action.payload, loading: { ...state.loading, customer: false } };
-    // Dispatch in Product client-side
-    // Check if action dispatched is STORE_CART and act on that
-    case RETRIEVE_CART_SUCCESS:
-      return { ...state, cart: action.payload };
     // Dispatch in ProductDetail client-side
     // Check if action dispatched is ADD_TO_CART and act on that
     case ADD_TO_CART_SUCCESS:

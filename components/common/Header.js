@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-import Cart from '../cart/Cart';
-import commerce from '../../lib/commerce';
-import Animation from '../cart/Animation';
 import { Transition } from 'react-transition-group';
 import { connect } from 'react-redux'
-import { clearCustomer } from '../../store/actions/authenticateActions';
 
 const duration = 300;
 
@@ -61,16 +57,13 @@ class Header extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener('Commercejs.Cart.Item.Added', this.handleAddToCartToggle);
 
     this.setState({
-      loggedIn: commerce.customer.isLoggedIn(),
     });
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
-    window.removeEventListener('Commercejs.Cart.Item.Added', this.handleAddToCartToggle);
   }
 
   toggleCart() {
@@ -85,7 +78,6 @@ class Header extends Component {
   }
 
   handleLogout() {
-    this.props.clearCustomer();
     this.setState({
       loggedIn: false,
     });
@@ -176,7 +168,6 @@ class Header extends Component {
 
     return (
       <header className="position-fixed top-0 left-0 right-0 font-weight-semibold no-print">
-        <Cart isOpen={showCart} toggle={value => this.toggleCart(value)} />
         <div
           ref={this.header}
           className={`d-flex header align-items-center justify-content-between position-relative ${
@@ -216,10 +207,6 @@ class Header extends Component {
               className="position-relative cursor-pointer"
               onClick={this.toggleCart}
             >
-              <Animation isStopped={ this.state.playAddToCartAnimation } />
-              <div className="cart-count position-absolute font-size-tiny font-weight-bold">
-                {cart.total_items}
-              </div>
             </div>
           </div>
         </div>
@@ -263,5 +250,4 @@ class Header extends Component {
 
 export default connect(
   state => state,
-  { clearCustomer },
 )(Header);

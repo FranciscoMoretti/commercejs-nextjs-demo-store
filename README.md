@@ -19,14 +19,7 @@ A high-fidelity fully-fledged eCommerce demo store built using the [Commerce.js]
      * [Create a Chec account](#create-a-chec-account)
  * [One-click Deploy with Netlify (recommended)](#one-click-deploy-with-netlify-recommended)
  * [Manual setup and Netlify deployment](#manual-setup-and-netlify-deployment)
- * [Setup using Chec CLI demo-store command](#setup-using-chec-cli-demo-store-command)
-   * [Caveats with data customization (IMPORTANT)](#caveats-with-data-customization-important)
  * [🥞 Stack](#-stack)
- * [Commerce.js features](#commercejs-features)
-     * [Carts](#carts)
-     * [The checkout](#the-checkout)
-     * [Customers](#customers)
-     * [Payment gateways](#payment-gateways)
  * [Customization and Extendability](#customization-and-extendability)
 
 
@@ -45,18 +38,6 @@ For a full detailed tutorial on building this JAMstack eCommerce application, pl
 - Chec CLI `yarn global add @chec/cli`
 
 ## Setup
-
-### Create a Chec account. 
-
-Now that you’ve installed Chec CLI globally, you will be able to access the list of `chec [COMMANDS]`, one of which is registering for a Chec account. Let’s go ahead and get that set up!
-
-```bash
-# Open the Chec registration page in your browser
-chec register
-```
-
-Follow the rest of the walk-through to set up your merchant details. Alternatively, you can go [here](https://authorize.chec.io/signup) to register for a Chec account. 
-
 
 ## One-click Deploy with Netlify (recommended)
 
@@ -169,14 +150,6 @@ This demo store uses a range of features provided by Commerce.js and powered by 
 
 The shopping cart uses the Commerce.js cart API. Carts are persisted for up to 30 days, and Commerce.js automatically 
 remembers carts for visitors.
-
-### The checkout
-
-Commerce.js provides many tools to streamline checkout implementations. The checkout in this demo store makes use of:
-
-- Commerce.js's country and region APIs,
-- the shipping methods API, and
-- the discounts API (for validating and applying discounts at the checkout).
 
 ### Customers
 
