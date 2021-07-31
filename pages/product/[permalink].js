@@ -7,7 +7,6 @@ import Root from '../../components/common/Root';
 import TemplatePage from '../../components/common/TemplatePage';
 import CarouselImages from '../../components/productAssets/CarouselImages';
 import ProductDetail from '../../components/productAssets/ProductDetail';
-import ClientReview from '../../components/productAssets/ClientReview';
 import SuggestedProducts from '../../components/productAssets/SuggestedProducts';
 import ExploreBanner from '../../components/productAssets/ExploreBanner';
 import Footer from '../../components/common/Footer';
@@ -131,7 +130,6 @@ export default function Product() {
       </div>
     </div>
 
-    <ClientReview />
     <SuggestedProducts />
     <ExploreBanner />
     <SocialMedia />
