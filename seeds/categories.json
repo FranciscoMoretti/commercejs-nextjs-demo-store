@@ -1,5 +1,6 @@
 [
   {
+    "id": "000001",
     "slug": "facial-products",
     "name": "Facial Products",
     "meta": {
@@ -7,6 +8,7 @@
     }
   },
   {
+    "id": "000002",
     "slug": "hair-products",
     "name": "Hair Products",
     "meta": {
@@ -14,6 +16,7 @@
     }
   },
   {
+    "id": "000003",
     "slug": "body-products",
     "name": "Body Products",
     "meta": {

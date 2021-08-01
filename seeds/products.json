@@ -3,11 +3,10 @@
     "id": "000000001",
     "name": "Face & Body Roller",
     "description": "Enrich your morning and evening beauty ritual and to help reduce the appearance of puffiness and wrinkles",
-    "price": "18.00",
-    "categories": [
-      "facial-products"
+    "categories_ids": [
+      "000001",
+      "000003"
     ],
-    "category_id": "categories[2].id",
     "permalink": "face_body_roller",
     "media": {
       "filename": "roller-3.jpg",

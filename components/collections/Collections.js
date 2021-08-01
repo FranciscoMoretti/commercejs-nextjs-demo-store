@@ -91,7 +91,7 @@ class Collections extends Component {
     }
     console.log(cat);
     console.log(products);
-    return products.filter(product => product.categories.find(productCategory => productCategory.id === cat.id));
+    return products.filter(product => product.categories_ids.find(categoryId => categoryId === cat.id));
   }
 
   /**
