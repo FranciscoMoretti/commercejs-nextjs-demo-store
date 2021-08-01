@@ -9,9 +9,8 @@
     ],
     "permalink": "face_body_roller",
     "media": {
-      "filename": "roller-3.jpg",
-      "url": "https://cdn.chec.io/merchants/17851/assets/F1t7AVOogO3VZoxE|roller-3.jpg",
-      "source": "https://cdn.chec.io/merchants/17851/assets/F1t7AVOogO3VZoxE|roller-3.jpg"
+      "source": "/images/product/1.png",
+      "assets": ["/images/product/4.png","/images/product/2.png", "/images/product/3.png"]
     }
   }
 ]

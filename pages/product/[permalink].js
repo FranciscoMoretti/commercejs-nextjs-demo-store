@@ -48,7 +48,8 @@ export default function Product({product}) {
     return <ErrorPage statusCode={404} />
   }
 
-  const images = product.media;
+  const images = product.media.assets;
+
   // const images = reduceProductImages(product);
 
   return (
@@ -63,7 +64,7 @@ export default function Product({product}) {
         <div className="product-sidebar">
           <CategoryList
             className="product-left-aside__category-list"
-            current={ product.categories[0] && product.categories[0].id }
+            current={ product.categories_ids && product.categories_ids[0] }
           />
           <CarouselImages images={images} />
         </div>

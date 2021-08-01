@@ -24,8 +24,10 @@ class ProductDetail extends Component {
       name,
       description,
       price,
-      variant_groups: variantGroups,
-    } = this.props.product;
+      categories_ids,
+      permalink,
+      media,
+      assets} = this.props.product;
 
     const soldOut = false;
     // const soldOut = this.props.product.is.sold_out;
