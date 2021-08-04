@@ -3,12 +3,14 @@
   "license": "BSD-3-Clause",
   "version": "0.1.0",
   "scripts": {
-    "dev": "NODE_OPTIONS='--inspect' next",
+    "dev": "NODE_OPTIONS='--inspect=0.0.0.0' next",
     "build": "next build",
     "start": "next start",
+    "storybook": "start-storybook --port 6006 --config-dir .storybook --quiet",
     "deploy": "next build && next export",
     "lint": "eslint components lib pages store utils",
-    "lint:fix": "eslint --fix components lib pages store utils"
+    "lint:fix": "eslint --fix components lib pages store utils",
+    "test:unit": "jest"
   },
   "dependencies": {
     "body-scroll-lock": "^2.6.4",
@@ -22,7 +24,6 @@
     "react": "16.12.0",
     "react-collapse": "^5.0.1",
     "react-dom": "16.12.0",
-    "react-lottie": "^1.2.3",
     "react-redux": "^7.2.0",
     "react-scroll": "^1.7.16",
     "react-transition-group": "^4.3.0",
@@ -32,6 +33,11 @@
     "swiper": "^6.6.2"
   },
   "devDependencies": {
+    "@storybook/react": "^3.4.12",
+    "@types/node": "^12.7.4",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@types/storybook__react": "^4.0.2",
     "@typescript-eslint/eslint-plugin": "2.x",
     "@typescript-eslint/parser": "2.x",
     "babel-eslint": "10.x",
@@ -41,7 +47,9 @@
     "eslint-plugin-import": "2.x",
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
-    "eslint-plugin-react-hooks": "2.x"
+    "eslint-plugin-react-hooks": "2.x",
+    "fork-ts-checker-webpack-plugin": "^6.3.1",
+    "typescript": "^3.6.2"
   },
   "description": "[![Netlify Status](https://img.shields.io/netlify/157bb2e2-611e-4bbd-9a59-c876f8c3c58a?style=for-the-badge)](https://app.netlify.com/sites/commercejs-demo-store/deploys)\r [![Stars](https://img.shields.io/github/stars/chec/commercejs-nextjs-demo-store?style=for-the-badge)](https://github.com/chec/commercejs-nextjs-demo-store)\r [![Forks](https://img.shields.io/github/forks/chec/commercejs-nextjs-demo-store?style=for-the-badge)](https://github.com/chec/commercejs-nextjs-demo-store/fork)",
   "main": "index.js",
