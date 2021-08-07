@@ -129,13 +129,12 @@ class Header extends Component {
               </a>
             </Link>
           </div>
-          <div className="d-flex">
-            { process.browser && this.renderLoginLogout() }
-            <div
-              className="position-relative cursor-pointer"
-              onClick={this.toggleCart}
-            >
-            </div>
+          <div className="d-sm-flex">
+            <Link href="/Contacto">
+              <a className="font-color-black">
+                Contacto
+              </a>
+            </Link>
           </div>
         </div>
 
