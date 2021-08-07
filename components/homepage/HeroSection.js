@@ -43,7 +43,7 @@ export default function HeroSection() {
               <p className="text-transform-uppercase font-size-title mb-5 hero-subheader">
                 A range of products for you
               </p>
-              <Link href="/collection">
+              <Link href="/products">
                 <a className="d-flex align-items-center bg-transparent border border-color-white h-56 px-5 font-color-white hero-btn">
                   Shop now
                 </a>
