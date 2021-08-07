@@ -18,20 +18,25 @@ const transitionStyles = {
   exited: { height: 0 }
 };
 
-const mobileMenuLinks = [
-  {
+const navigationLinks = {
+  "home": {
     name: 'Home',
     link: '/'
   },
+  "products":
   {
-    name: 'Shop',
-    link: '/collection'
+    name: 'Productos',
+    link: '/products'
   },
-  {
-    name: 'About',
+  "about":{
+    name: 'Nosotros',
     link: '/about'
+  },
+  "contact":{
+    name: 'Contacto',
+    link: '/contact'
   }
-];
+};
 
 class Header extends Component {
   constructor(props) {
@@ -103,12 +108,14 @@ class Header extends Component {
           }`}
         >
           <div className="d-none d-sm-flex">
-            <Link href="/collection">
-              <a href="/collection" className="mr-4 font-color-black">Shop</a>
+            <Link href={navigationLinks["products"]["link"]}>
+              <a className="mr-4 font-color-black">
+                {navigationLinks["products"]["name"]}
+              </a>
             </Link>
-            <Link href="/about">
-              <a href="/about" className="font-color-black">
-                About
+            <Link href={navigationLinks["about"]["link"]}>
+              <a className="mr-4 font-color-black">
+                {navigationLinks["about"]["name"]}
               </a>
             </Link>
           </div>
@@ -130,9 +137,9 @@ class Header extends Component {
             </Link>
           </div>
           <div className="d-sm-flex">
-            <Link href="/Contacto">
-              <a className="font-color-black">
-                Contacto
+            <Link href={navigationLinks["contact"]["link"]}>
+              <a className="mr-4 font-color-black">
+                {navigationLinks["contact"]["name"]}
               </a>
             </Link>
           </div>
@@ -157,7 +164,7 @@ class Header extends Component {
                   top: '4em'
                 }}
               >
-                {mobileMenuLinks.map((item, i) => (
+                {Object.values(navigationLinks).map((item, i) => (
                   <a
                     key={i}
                     href={item.link}
