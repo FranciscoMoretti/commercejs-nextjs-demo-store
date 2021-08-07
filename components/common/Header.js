@@ -39,20 +39,13 @@ class Header extends Component {
 
     this.state = {
       showMobileMenu: false,
-      showCart: false,
-      playAddToCartAnimation: false,
-      loggedIn: false,
     };
 
     this.header = React.createRef();
 
     this.animate = this.animate.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
-    this.toggleCart = this.toggleCart.bind(this);
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
-    this.toggleAddToCartAnimation = this.toggleAddToCartAnimation.bind(this);
-    this.handleAddToCartToggle = this.handleAddToCartToggle.bind(this);
-    this.handleLogout = this.handleLogout.bind(this);
   }
 
   componentDidMount() {
@@ -66,22 +59,11 @@ class Header extends Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  toggleCart() {
-    const { showCart } = this.state;
-    this.setState({
-      showCart: !showCart,
-    });
-  }
 
   handleScroll() {
     window.requestAnimationFrame(this.animate);
   }
 
-  handleLogout() {
-    this.setState({
-      loggedIn: false,
-    });
-  }
 
   animate() {
     const { transparent } = this.props;
@@ -106,61 +88,7 @@ class Header extends Component {
     }
   }
 
-  /**
-   * Toggle add to cart animation to true
-   */
-  toggleAddToCartAnimation() {
-    const { playAddToCartAnimation } = this.state;
 
-    this.setState({ playAddToCartAnimation: !playAddToCartAnimation });
-  }
-
-  /**
-   * Call toggle of add to cart animation and set time out to false
-   */
-  handleAddToCartToggle() {
-    this.toggleAddToCartAnimation();
-    setTimeout(() => {
-      this.toggleAddToCartAnimation();
-    }, 3000)
-  }
-
-  renderLoginLogout() {
-    const { customer } = this.props;
-    const { loggedIn } = this.state;
-
-    if (loggedIn) {
-      return (
-        <div className="d-flex align-items-center">
-          { customer && customer.firstname && (
-            <span className="mr-2 font-weight-regular">
-              Hi, { customer.firstname }!
-            </span>
-          ) }
-          <Link href="/account">
-            <a className="font-color-black mx-2">
-              My account
-            </a>
-          </Link>
-          <button
-            className="bg-transparent mr-2 font-color-black font-weight-semibold"
-            type="button"
-            onClick={this.handleLogout}
-          >
-            Logout
-          </button>
-        </div>
-      );
-    }
-
-    return (
-      <Link href="/login">
-        <a className="font-color-black login">
-          Login
-        </a>
-      </Link>
-    );
-  }
 
   render() {
     const { showMobileMenu } = this.state;
