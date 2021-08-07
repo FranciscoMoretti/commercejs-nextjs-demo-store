@@ -163,8 +163,8 @@ class Header extends Component {
   }
 
   render() {
-    const { showMobileMenu, showCart } = this.state;
-    const { transparent, cart } = this.props;
+    const { showMobileMenu } = this.state;
+    const { transparent } = this.props;
 
     return (
       <header className="position-fixed top-0 left-0 right-0 font-weight-semibold no-print">
