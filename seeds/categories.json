@@ -1,26 +1,26 @@
 [
   {
     "id": "000001",
-    "slug": "facial-products",
-    "name": "Facial Products",
+    "slug": "blandos",
+    "name": "Blandos",
     "meta": {
-      "image": "/images/collection/1.png"
+      "image": "/images/categories/blandos.jpg"
     }
   },
   {
     "id": "000002",
-    "slug": "hair-products",
-    "name": "Hair Products",
+    "slug": "semi-duros",
+    "name": "Semi-duros",
     "meta": {
-      "image": "/images/collection/2.png"
+      "image": "/images/categories/semi_duros.jpg"
     }
   },
   {
     "id": "000003",
-    "slug": "body-products",
-    "name": "Body Products",
+    "slug": "duros",
+    "name": "Duros",
     "meta": {
-      "image": "/images/collection/3.png"
+      "image": "/images/categories/duros.jpg"
     }
   }
 ]

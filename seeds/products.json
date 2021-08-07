@@ -1,16 +1,67 @@
 [
   {
     "id": "000000001",
-    "name": "Face & Body Roller",
-    "description": "Enrich your morning and evening beauty ritual and to help reduce the appearance of puffiness and wrinkles",
+    "name": "Cremoso",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "categories_ids": [
-      "000001",
+      "000001"
+    ],
+    "permalink": "cremoso",
+    "media": {
+      "source": "/images/product/cremoso_horma.png",
+      "assets": ["/images/product/cremoso_horma.png","/images/product/cremoso_cuarto.png"]
+    }
+  },
+  {
+    "id": "000000002",
+    "name": "Tybo",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "categories_ids": [
+      "000002"
+    ],
+    "permalink": "tybo",
+    "media": {
+      "source": "/images/product/tybo_horma.png",
+      "assets": ["/images/product/tybo_horma.png","/images/product/tybo_cuarto.png"]
+    }
+  },
+  {
+    "id": "000000003",
+    "name": "Cheddar",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "categories_ids": [
+      "000002"
+    ],
+    "permalink": "cheddar",
+    "media": {
+      "source": "/images/product/cheddar_horma.png",
+      "assets": ["/images/product/cheddar_horma.png","/images/product/cheddar_cuarto.png"]
+    }
+  },
+  {
+    "id": "000000004",
+    "name": "Sardo Fresco",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "categories_ids": [
       "000003"
     ],
-    "permalink": "face_body_roller",
+    "permalink": "sardo_fresco",
     "media": {
-      "source": "/images/product/1.png",
-      "assets": ["/images/product/4.png","/images/product/2.png", "/images/product/3.png"]
+      "source": "/images/product/sardo_fresco_horma.png",
+      "assets": ["/images/product/sardo_fresco_horma.png","/images/product/sardo_fresco_cuarto.png"]
+    }
+  },
+  {
+    "id": "000000005",
+    "name": "Sardo Semi-estacionado",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "categories_ids": [
+      "000003"
+    ],
+    "permalink": "sardo_semi_estacionado",
+    "media": {
+      "source": "/images/product/sardo_semi_estacionado_horma.png",
+      "assets": ["/images/product/sardo_semi_estacionado_horma.png","/images/product/sardo_semi_estacionado_cuarto.png"]
     }
   }
 ]
