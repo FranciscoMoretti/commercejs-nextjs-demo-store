@@ -27,8 +27,6 @@ export default function Product({product}) {
   // const [product, setProduct] = useState(null);
   // const [loading, setLoading] = useState(true);
 
-  console.log(permalink)
-
   const toggleShipping = () => {
     setShowShipping(!showShipping);
   }

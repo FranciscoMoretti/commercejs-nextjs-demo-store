@@ -45,15 +45,11 @@ class Collections extends Component {
    */
   filterProductsByCat(catSlug) {
     const { categories, products } = this.props;
-    console.log(catSlug);
 
-    console.log(categories);
     const cat = categories.find((category) => category.slug === catSlug);
     if (!cat) {
       return [];
     }
-    console.log(cat);
-    console.log(products);
     return products.filter((product) =>
       product.categories_ids.find((categoryId) => categoryId === cat.id)
     );
@@ -74,7 +70,6 @@ class Collections extends Component {
               {category.name}
             </p>
             <div className="row mb-5 collection-1">
-              {console.log(categories.slug)}
               {this.filterProductsByCat(category.slug).map((product) => (
                 <div key={product.id} className="col-6 col-sm-4 col-md-3">
                   <ProductCard

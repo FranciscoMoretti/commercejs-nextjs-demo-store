@@ -9,10 +9,8 @@ class ProductRow extends Component {
 
     return (
       <div className="row mb-5">
-        { console.log(products)}
         {products.map((product) => (
           <div key={product.id} className="col-6 col-sm-6 col-lg-3">
-            { console.log(product)}
             <ProductCard
               permalink={product.permalink}
               image={product.media.source}
