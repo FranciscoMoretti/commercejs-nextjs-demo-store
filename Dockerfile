@@ -15,6 +15,8 @@ RUN npm install
 
 COPY . .
 
+CMD ["npm", "run", "dev"]
+
 # Build
 FROM test-target as build-target
 ENV NODE_ENV=production
