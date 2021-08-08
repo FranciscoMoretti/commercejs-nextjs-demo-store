@@ -120,8 +120,10 @@ export default function Product({product}) {
     </div>
 
     <SuggestedProducts />
-    <ExploreBanner />
-    <SocialMedia />
+    {/* Disable ExploreBanner until it's customized */}
+    {/* <ExploreBanner /> */}
+    {/* Disable SocialMedia until it's customized */}
+    {/* <SocialMedia /> */}
     <Footer />
   </Root>
   );

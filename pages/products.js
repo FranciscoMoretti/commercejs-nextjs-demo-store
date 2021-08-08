@@ -12,8 +12,10 @@ const Home = () => (
       <title>Collection</title>
     </Head>
     <Collections />
-    <ExploreBanner />
-    <SocialMedia />
+    {/* Disable ExploreBanner until it's customized */}
+    {/* <ExploreBanner /> */}
+    {/* Disable SocialMedia until it's customized */}
+    {/* <SocialMedia /> */}
     <Footer />
   </Root>
 );
