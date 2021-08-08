@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
 import { connect } from 'react-redux';
 import ProductCard from '../products/ProductCard';
+import CategoryList from '../../components/products/CategoryList';
 
 class Collections extends Component {
   constructor(props) {
@@ -15,11 +15,11 @@ class Collections extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   handleScroll() {
@@ -28,53 +28,16 @@ class Collections extends Component {
         return;
       }
 
-      const distance =
-        this.page.current.getBoundingClientRect().bottom -
-        window.innerHeight;
+      const distance = this.page.current.getBoundingClientRect().bottom - window.innerHeight;
 
       if (distance < 0) {
         this.sidebar.current.style.transform = `translateY(${distance}px)`;
       } else {
-        this.sidebar.current.style.transform = 'translateY(0px)';
+        this.sidebar.current.style.transform = "translateY(0px)";
       }
     };
 
     window.requestAnimationFrame(animate);
-  }
-
-  renderSidebar() {
-    const { categories } = this.props;
-
-    return (
-      <>
-        {categories.map(category => (
-          <div key={category.id} className="custom-container">
-            <div className="row">
-              <div className="col-2 d-none d-lg-block position-relative">
-                <p className="font-size-title font-weight-medium mb-3">
-                  {category.name}
-                </p>
-                <Link href={`/products#${category.slug}`}>
-                  <div className="mb-5">
-                    <div className="d-flex">
-                      <p className="mb-2 position-relative cursor-pointer">
-                        Products
-                        <span
-                          className="position-absolute font-size-tiny text-right"
-                          style={{ right: '-12px', top: '-4px' }}
-                        >
-                          {category.products}
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        ))}
-      </>
-    );
   }
 
   /**
@@ -85,13 +48,15 @@ class Collections extends Component {
     console.log(catSlug);
 
     console.log(categories);
-    const cat = categories.find(category => category.slug === catSlug);
+    const cat = categories.find((category) => category.slug === catSlug);
     if (!cat) {
       return [];
     }
     console.log(cat);
     console.log(products);
-    return products.filter(product => product.categories_ids.find(categoryId => categoryId === cat.id));
+    return products.filter((product) =>
+      product.categories_ids.find((categoryId) => categoryId === cat.id)
+    );
   }
 
   /**
@@ -99,34 +64,34 @@ class Collections extends Component {
    */
   renderCollection() {
     const { categories } = this.props;
-    const reg = /(<([^>]+)>)/ig;
+    const reg = /(<([^>]+)>)/gi;
 
     return (
       <div className="collection">
-        {categories.map(category => (
+        {categories.map((category) => (
           <div key={category.id}>
-              <p className="font-size-title font-weight-medium mb-4" id={category.slug}>
-                {category.name}
-              </p>
-              <div className="row mb-5 collection-1">
-                { console.log(categories.slug)}
-                {this.filterProductsByCat(category.slug).map(product => (
-                  <div key={product.id} className="col-6 col-sm-4 col-md-3">
-                    <ProductCard
-                      permalink={product.permalink}
-                      image={product.media.source}
-                      name={product.name}
-                      description={product.description && product.description.replace(reg, '')}
-                      soldOut={false}
-                      // soldOut={product.is.sold_out}
-                    />
-                  </div>
-                ))}
-              </div>
+            <p className="font-size-title font-weight-medium mb-4" id={category.slug}>
+              {category.name}
+            </p>
+            <div className="row mb-5 collection-1">
+              {console.log(categories.slug)}
+              {this.filterProductsByCat(category.slug).map((product) => (
+                <div key={product.id} className="col-6 col-sm-4 col-md-3">
+                  <ProductCard
+                    permalink={product.permalink}
+                    image={product.media.source}
+                    name={product.name}
+                    description={product.description && product.description.replace(reg, "")}
+                    soldOut={false}
+                    // soldOut={product.is.sold_out}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
-    )
+    );
   }
 
   render() {
@@ -135,22 +100,16 @@ class Collections extends Component {
         <Head>
           <title>Collections</title>
         </Head>
-        <div className="py-4">
+        <div ref={this.sidebar} className="main-product-content">
           {/* Sidebar */}
-          <div
-            ref={this.sidebar}
-            className="position-fixed left-0 right-0"
-            style={{ top: '7.5rem' }}
-          >
-            { this.renderSidebar() }
+          <div className="product-sidebar">
+            <CategoryList className="product-left-aside__category-list" />
           </div>
 
           {/* Main Content */}
           <div ref={this.page} className="custom-container">
             <div className="row">
-              <div className="col-12 col-lg-10 offset-lg-2">
-                { this.renderCollection() }
-              </div>
+              <div className="col-12 col-lg-10 offset-lg-2">{this.renderCollection()}</div>
             </div>
           </div>
         </div>
