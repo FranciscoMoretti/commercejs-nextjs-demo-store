@@ -75,7 +75,14 @@ class CarouselImages extends Component {
   }
 
   render() {
-    const { images } = this.props;
+    const {images} = this.props;
+
+    let background_style;
+    if (this.props.expandImage){
+      background_style = `center center/cover`;
+    } else{
+      background_style = `center center/ 100% auto no-repeat`;
+    }
 
     return (
       <div className="d-flex">
@@ -88,7 +95,7 @@ class CarouselImages extends Component {
               className="h-56 w-48 mb-3 cursor-pointer"
               onClick={this.onClickImage.bind(this, index)}
               style={{
-                background: `url("${image}") center center/cover`,
+                background: `url("${image}") ${background_style}`,
                 border:
                   index === 0 ? '2px solid #000000' : '2px solid #FFFFFF'
               }}
