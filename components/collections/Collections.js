@@ -100,9 +100,9 @@ class Collections extends Component {
         <Head>
           <title>Collections</title>
         </Head>
-        <div ref={this.sidebar} className="main-product-content">
+        <div className="main-product-content">
           {/* Sidebar */}
-          <div className="product-sidebar">
+          <div ref={this.sidebar} className="product-sidebar">
             <CategoryList className="product-left-aside__category-list" />
           </div>
 
