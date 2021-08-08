@@ -1,7 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function ProductCard({ permalink, image, name, description, soldOut}) {
+export default function ProductCard({ permalink, image, name, description, soldOut, expandImage=false}) {
+  let background_style
+  if (expandImage){
+    background_style = `url("${image}") center center/cover`
+  } else{
+    background_style = `url("${image}") center center/ 100% auto no-repeat`
+  }
+
   return (
     <Link href="/product/[permalink]" as={`/product/${permalink}`}>
       <a className="mb-5 d-block font-color-black cursor-pointer">
@@ -9,7 +16,7 @@ export default function ProductCard({ permalink, image, name, description, soldO
           className="mb-3"
           style={{
             paddingBottom: '125%',
-            background: `url("${image}") center center/cover`
+            background: background_style
           }}
         >
           {soldOut && <div className="product-card--overlay-text">SOLD OUT</div>}
