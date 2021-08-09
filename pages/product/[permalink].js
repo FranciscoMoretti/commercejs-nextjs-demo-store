@@ -15,10 +15,6 @@ import CategoryList from '../../components/products/CategoryList';
 import reduceProductImages from '../../lib/reduceProductImages';
 import ProductCard from '../../components/products/ProductCard';
 
-const detailView = `<p>
-  Slightly textured fabric with tonal geometric design and a bit of shine
-</p>`;
-
 export default function Product({product}) {
   const router = useRouter();
   const { permalink } = router.query;
@@ -89,13 +85,12 @@ export default function Product({product}) {
             onClick={toggleShipping}
             className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
           >
-            Shipping and returns
+            Donde comprar
             <img src="/icon/plus.svg" />
           </div>
           <Collapse isOpened={showShipping}>
             <div className="pb-4 font-color-medium">
-              Arrives in 5 to 7 days, returns accepted within 30
-              days. For more information, click here.
+              En nuestro local o comuniquese con nosotros para conocer negocios con los que trabajamos en su ciudad.
             </div>
           </Collapse>
           <div className="h-1 border-bottom border-color-black" />
@@ -103,16 +98,13 @@ export default function Product({product}) {
             onClick={toggleDetails}
             className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
           >
-            Details
+            Detalles
             <img src="/icon/plus.svg" />
           </div>
           <Collapse isOpened={showDetails}>
-            <div
-              className="pb-4 font-color-medium"
-              dangerouslySetInnerHTML={{
-                __html: detailView
-              }}
-            />
+            <div className="pb-4 font-color-medium">
+              Detalles del producto { product.name }
+            </div>
           </Collapse>
           <div className="h-1 borderbottom border-color-black" />
         </div>
