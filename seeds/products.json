@@ -2,7 +2,7 @@
   {
     "id": "000000001",
     "name": "Cremoso",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "description": "Queso Cremoso envasado por horma o por cuarto de horma",
     "categories_ids": [
       "000001"
     ],
@@ -15,7 +15,7 @@
   {
     "id": "000000002",
     "name": "Tybo",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "description": "Queso Tybo envasado por horma o por cuarto de horma",
     "categories_ids": [
       "000002"
     ],
@@ -28,7 +28,7 @@
   {
     "id": "000000003",
     "name": "Cheddar",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "description": "Queso Cheddar envasado por horma o por cuarto de horma",
     "categories_ids": [
       "000002"
     ],
@@ -41,7 +41,7 @@
   {
     "id": "000000004",
     "name": "Sardo Fresco",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "description": "Queso Sardo Fresco envasado por horma o por cuarto de horma",
     "categories_ids": [
       "000003"
     ],
@@ -54,7 +54,7 @@
   {
     "id": "000000005",
     "name": "Sardo Semi-estacionado",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "description": "Queso Sardo Semi-estacionado envasado por horma o por cuarto de horma",
     "categories_ids": [
       "000003"
     ],
