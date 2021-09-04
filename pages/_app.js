@@ -3,7 +3,8 @@ import React, {useEffect, useState} from 'react';
 import '../style/scss/style.scss';
 import { useStore } from '../store';
 import { Provider  } from 'react-redux';
-import 'swiper/components/effect-fade/effect-fade.scss';
+// import 'swiper/components/effect-fade/effect-fade.scss';
+import 'swiper/scss/effect-fade';
 
 const MyApp = ({Component, pageProps}) => {
 
