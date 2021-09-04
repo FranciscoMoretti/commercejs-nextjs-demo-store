@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Head from 'next/head';
 import Root from '../components/common/Root';
 import Footer from '../components/common/Footer';
-import cjs_illustration from '../../public/cjs-illustration.svg';
+import cjs_illustration from '../public/cjs-illustration.svg';
 
 const About = () => (
   <Root>
