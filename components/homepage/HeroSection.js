@@ -1,21 +1,21 @@
-import React from 'react';
-import { Autoplay, EffectFade, Swiper as SwiperCore } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Link from 'next/link';
+import React from "react";
+import { Autoplay, EffectFade, Swiper as SwiperCore } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Link from "next/link";
 
 const params = {
   slidesPerView: 1,
   watchOverflow: false,
   autoplay: {
-    delay: 5000
+    delay: 5000,
   },
   loop: true,
   allowTouchMove: false,
   speed: 1000,
-  effect: 'fade',
+  effect: "fade",
   fadeEffect: {
-    crossFade: true
-  }
+    crossFade: true,
+  },
 };
 const images = [
   '/images/home-1.jpg',
