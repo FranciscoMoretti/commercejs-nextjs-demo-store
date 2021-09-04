@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Image from 'next/image'
 import Link from 'next/link';
 import { Transition } from 'react-transition-group';
 import { connect } from 'react-redux';
@@ -129,8 +130,8 @@ class Header extends Component {
             />
             <Link href="/">
               <a>
-                <img
-                  src="/images/logo_text_black.svg"
+                <Image
+                  src={logo_text_black}
                   className="logo cursor-pointer"
                   alt="Logo"
                 />
