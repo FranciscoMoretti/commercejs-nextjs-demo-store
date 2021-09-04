@@ -1,7 +1,12 @@
 import React from "react";
 import { Autoplay, EffectFade, Swiper as SwiperCore } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
 import Link from "next/link";
+import home_1 from "../../public/images/home-1.jpg";
+import home_2 from "../../public/images/home-2.jpg";
+import home_3 from "../../public/images/home-3.jpg";
+import home_4 from "../../public/images/home-4.jpg";
 
 const params = {
   slidesPerView: 1,
@@ -17,12 +22,7 @@ const params = {
     crossFade: true,
   },
 };
-const images = [
-  '/images/home-1.jpg',
-  '/images/home-2.jpg',
-  '/images/home-3.jpg',
-  '/images/home-4.jpg',
-];
+const images = [home_1, home_2, home_3, home_4];
 
 export default function HeroSection() {
   SwiperCore.use([Autoplay, EffectFade]);
@@ -31,12 +31,11 @@ export default function HeroSection() {
       <Swiper {...params}>
         {images.map((image, index) => (
           <SwiperSlide key={image}>
-            <div
-              className="hero-slide d-flex align-items-center justify-content-center flex-column font-color-white py-5"
-              style={{
-                backgroundImage: `url("${image}")`
-              }}
-            >
+            <div className="hero-slide d-flex align-items-center justify-content-center flex-column font-color-white py-5">
+              <div className="bg-wrap">
+                <Image src={image} alt="Picture of the author" layout="fill" objectFit="cover" />
+              </div>
+
               <p className="font-size-display5 font-family-secondary mb-4 text-center hero-header">
                 Calidad y tradición
               </p>

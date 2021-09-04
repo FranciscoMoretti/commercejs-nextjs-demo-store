@@ -3,8 +3,16 @@ $color: rgba(0, 0, 0, 0);
 .hero-section {
   .hero-slide {
     min-height: 85vh;
+  }
+
+  .bg-wrap {
     background-size: cover;
     background-position: center;
+    position: fixed;
+    min-height: 85vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: -1;
   }
 
   .circle {
