@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 import { Transition } from 'react-transition-group';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import logo_text_black from '../../public/images/logo_text_black.svg';
 
 const duration = 300;
 
