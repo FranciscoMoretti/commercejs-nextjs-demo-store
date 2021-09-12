@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Image from "next/image";
 import Link from 'next/link';
 import { connect } from 'react-redux';
 
@@ -25,12 +26,11 @@ class CategoryBanner extends Component {
                   <a className="align-items-center font-color-black flex-column cursor-pointer mb-5">
                     <div>
                       { item.meta?.image && (
-                        <div
-                          className="mb-4 w-100 collection-item-image"
-                          style={{
-                            background: `url("${item.meta.image}") center center/cover`
-                          }}
-                        />
+                        <div className="mb-4 w-100 collection-item-image">
+                          <div className="bg-wrap">
+                            <Image src={item.meta.image} alt="Picture of the author" layout="fill" objectFit="cover"/>
+                          </div>
+                        </div>
                       )}
                       <p className="mb-2 font-size-heading text-center">
                         {item.name}
