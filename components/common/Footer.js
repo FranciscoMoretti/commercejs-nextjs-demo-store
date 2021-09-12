@@ -2,6 +2,15 @@ import React from 'react';
 
 const Footer = () => (
   <footer className="pt-5">
+    {/* WhatsApp icon */}
+    <a
+      href="https://wa.me/5493404631236?text=Hola%20quiero%20hacer%20un%20un%20pedido%20o%20consulta"
+      class="whatsapp_float"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fa fa-whatsapp whatsapp-icon"></i>
+    </a>
     <div className="custom-container mb-5 pb-5 pt-5">
       <div className="row">
         <div className="col-12 col-sm-6 col-md-4">
