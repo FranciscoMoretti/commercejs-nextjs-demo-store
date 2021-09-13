@@ -37,7 +37,7 @@ export default function HeroSection() {
               </div>
 
               <p className="font-size-display5 font-family-secondary mb-4 text-center hero-header">
-                Calidad y tradición
+                CALIDAD Y TRADICIÓN
               </p>
               <p className="text-transform-uppercase font-size-title mb-5 hero-subheader">
                 Variedad de quesos para vos
