@@ -89,10 +89,7 @@ export default function Product({product}) {
             className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
           >
             Donde comprar
-            <Image
-             src="/icon/plus.svg"
-             width={500}
-             height={500}/>
+            <img src="/icon/plus.svg" />
           </div>
           <Collapse isOpened={showShipping}>
             <div className="pb-4 font-color-medium">
@@ -105,10 +102,7 @@ export default function Product({product}) {
             className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
           >
             Detalles
-            <Image 
-             src="/icon/plus.svg"
-             width={500}
-             height={500} />
+            <img src="/icon/plus.svg" />
           </div>
           <Collapse isOpened={showDetails}>
             <div className="pb-4 font-color-medium">
