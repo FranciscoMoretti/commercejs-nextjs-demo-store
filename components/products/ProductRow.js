@@ -8,9 +8,10 @@ class ProductRow extends Component {
     const reg = /(<([^>]+)>)/ig;
 
     return (
-      <div className="row mb-5">
+      // <div className="row mb-5">
+      <div className="card-deck align-items-stretch">
         {products.map((product) => (
-          <div key={product.id} className="col-6 col-sm-6 col-lg-3">
+          <div key={product.id} className="flex-wrap col-6 col-sm-6 col-lg-3">
             <ProductCard
               permalink={product.permalink}
               image={product.media.source}

@@ -69,10 +69,10 @@ class Collections extends Component {
             <p className="font-size-title font-weight-medium mb-4" id={category.slug}>
               {category.name}
             </p>
-            <div className="row mb-5 collection-1">
+            <div className="row mb-5 collection-1 card-deck card-deck-style">
               {this.filterProductsByCat(category.slug).map((product) => (
-                <div key={product.id} className="col-6 col-sm-4 col-md-3">
                   <ProductCard
+                    key={product.id}
                     permalink={product.permalink}
                     image={product.media.source}
                     name={product.name}
@@ -80,7 +80,6 @@ class Collections extends Component {
                     soldOut={false}
                     // soldOut={product.is.sold_out}
                   />
-                </div>
               ))}
             </div>
           </div>
@@ -95,16 +94,20 @@ class Collections extends Component {
         <Head>
           <title>Collections</title>
         </Head>
-        <div className="main-product-content">
+        <div className="py-4">
+
+          <div ref={this.page} className="custom-container">
+            <div className="d-flex">
           {/* Sidebar */}
-          <div ref={this.sidebar} className="product-sidebar">
+          <div
+            ref={this.sidebar}
+            className="w-100 mr-8"
+            style={{ }}
+            >
             <CategoryList className="product-left-aside__category-list" />
           </div>
-
-          {/* Main Content */}
-          <div ref={this.page} className="custom-container">
-            <div className="row">
-              <div className="col-12 col-lg-10 offset-lg-2">{this.renderCollection()}</div>
+            {/* Main Content */}
+              <div className="col-10 offset-2">{this.renderCollection()}</div>
             </div>
           </div>
         </div>

@@ -3,3 +3,59 @@
     color: white;
     text-align: center;
 }
+
+
+.product-card-image {
+    background-color: rgba(0,0,0,.7);
+    color: white;
+    text-align: center;
+}
+
+
+.card-deck-style {
+    flex-wrap: wrap;
+    flex-flow: row;
+    align-content: center;
+    justify-content: left;
+
+    .card-style{
+      margin-right: 3%;
+    }
+  }
+
+  .card-style {
+    padding: 19px;
+    flex-direction: column;
+    width: 284px;
+    display: flex;
+    box-sizing: border-box;
+
+    // Bootstrap card without flex
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+  }
+
+  .card-img-container-style {
+    display: flex;
+    height: 244px;
+    width: 244px;
+  }
+
+  .card-img-style {
+    width: 100%;
+    align-self: center;
+    flex-grow: 1;
+  }
+
+  .card-body-style {
+    box-sizing: border-box;
+  }
+
+  .some-class{
+    min-width: 100%;
+    display: block;
+    margin: auto;
+  }
+

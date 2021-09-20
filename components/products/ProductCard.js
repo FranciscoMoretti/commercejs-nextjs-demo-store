@@ -22,21 +22,23 @@ export default function ProductCard({ permalink, image, name, description, soldO
 
   return (
     <Link href="/product/[permalink]" as={`/product/${permalink}`}>
-      <a className="mb-5 d-block font-color-black cursor-pointer">
-        <div
-          className="mb-3"
-          style={{
-            // paddingBottom: '100%'
-          }}
-        >
-            {/* Get the last part of image name to match the key in images dictionary.*/}
-            <Image src={images[image.split("/").pop()]} alt="Picture of the author" layout="responsive"/>
-          {soldOut && <div className="product-card--overlay-text">SOLD OUT</div>}
+      <a className="mb-5 d-block font-color-black cursor-pointer card-style">
+        <div className="card-img-container-style">
+            <div className="some-class">
+              <Image
+              src={images[image.split("/").pop()]}
+              layout="responsive" className={'image'} />
+            </div>
+            {soldOut && <div className="product-card--overlay-text">SOLD OUT</div>}
         </div>
-        <p className="font-size-subheader mb-2 font-weight-medium">
-          {name}
-        </p>
-        <p className="mb-2 font-color-medium">{description}</p>
+        <div className="card-body card-body-style">
+          <h5 className="card-title">
+            {name}
+          </h5>
+          <p className="card-text">
+            {description}
+          </p>
+        </div>
       </a>
     </Link>
   );
