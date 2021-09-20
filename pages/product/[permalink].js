@@ -16,6 +16,14 @@ import CategoryList from '../../components/products/CategoryList';
 import reduceProductImages from '../../lib/reduceProductImages';
 import ProductCard from '../../components/products/ProductCard';
 
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  return images;
+}
+
+const importedImages = importAll(require.context('../../public/images/product', false, /\.(png|jpe?g|svg)$/));
+
 export default function Product({product}) {
   const router = useRouter();
   const { permalink } = router.query;
@@ -67,13 +75,12 @@ export default function Product({product}) {
         <div className="product-images">
           <div className="flex-grow-1">
             {Array.isArray(images) ? (images.map((image, i) => (
-              <Image
-                key={i}
-                src={image}
-                width={500}
-                height={500}
-                className="w-100 mb-3 carousel-main-images"
-              />
+              <div key={i} className="w-100 mb-3 carousel-main-images d-item">
+                  <Image
+                    key={i}
+                    src={importedImages[image.split("/").pop()]}
+                  />
+              </div>
             ))) : (
               ''
             )}
