@@ -27,7 +27,8 @@ export default function ProductCard({ permalink, image, name, description, soldO
             <div className="some-class">
               <Image
               src={images[image.split("/").pop()]}
-              layout="responsive" className={'image'} />
+              layout="responsive" className={'image'}
+              sizes={'244px'} />
             </div>
             {soldOut && <div className="product-card--overlay-text">SOLD OUT</div>}
         </div>
