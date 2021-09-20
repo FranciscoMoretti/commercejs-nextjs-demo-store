@@ -27,9 +27,8 @@ class CategoryBanner extends Component {
                     <div>
                       { item.meta?.image && (
                         <div className="mb-4 w-100 collection-item-image">
-                          <div className="bg-wrap">
-                            <Image src={item.meta.image} alt="Picture of the author" layout="fill" objectFit="cover"/>
-                          </div>
+                            <Image src={item.meta.image} alt="Picture of the author" layout="fill" objectFit="cover"
+                            sizes={`320px`}/>
                         </div>
                       )}
                       <p className="mb-2 font-size-heading text-center">
