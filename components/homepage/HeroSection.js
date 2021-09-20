@@ -33,7 +33,7 @@ export default function HeroSection() {
           <SwiperSlide key={image}>
             <div className="hero-slide d-flex align-items-center justify-content-center flex-column font-color-white py-5">
               <div className="bg-wrap">
-                <Image src={image} alt="Picture of the author" layout="fill" objectFit="cover" />
+                <Image src={image} alt="Picture of the author" layout="fill" objectFit="cover" sizes={"1080px"} />
               </div>
 
               <p className="font-size-display5 font-family-secondary mb-4 text-center hero-header">
