@@ -73,13 +73,17 @@ export default function Product({product}) {
         </div>
 
         <div className="product-images">
-          <div className="flex-grow-1">
+          <div className="flex-grow-1 align-items-stretch">
             {Array.isArray(images) ? (images.map((image, i) => (
               <div key={i} className="w-100 mb-3 carousel-main-images d-item">
+                <div className="some-class w-100">
                   <Image
                     key={i}
                     src={importedImages[image.split("/").pop()]}
+                    layout="responsive"
+                    sizes={'500px'}
                   />
+                </div>
               </div>
             ))) : (
               ''

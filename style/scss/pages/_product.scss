@@ -28,6 +28,8 @@
   .product-images {
     display: flex;
     margin: 0 4rem;
+    font: fallback;
+    flex-basis: 50%;
   }
 
   .product-detail {
@@ -35,6 +37,7 @@
     top: 6.5rem;
     min-width: 24rem;
     align-self: flex-start;
+    flex-basis: 20%;
 
     @include md-max {
       padding: 1.5rem 1em 0;
