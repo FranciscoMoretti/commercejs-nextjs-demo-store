@@ -96,20 +96,16 @@ class Collections extends Component {
         </Head>
         <div className="py-4">
 
-          <div ref={this.page} className="custom-container">
-            <div className="d-flex">
+          <div ref={this.page} className="main-product-content">
           {/* Sidebar */}
-          <div
-            ref={this.sidebar}
-            className="w-100 mr-8"
-            style={{ }}
-            >
+          <div className="product-sidebar" ref={this.sidebar}>
             <CategoryList className="product-left-aside__category-list" />
           </div>
             {/* Main Content */}
+            <div className="product-images">
               <div className="col-10 offset-2">{this.renderCollection()}</div>
+              </div>
             </div>
-          </div>
         </div>
       </div>
     );
