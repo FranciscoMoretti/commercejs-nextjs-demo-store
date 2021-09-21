@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image'
 import Root from '../components/common/Root';
 import Footer from '../components/common/Footer';
-import cjs_illustration from '../public/cjs-illustration.svg';
+import logo from '../public/logo.svg';
 
 
 const About = () => {
@@ -31,7 +31,7 @@ const About = () => {
         <div className="col-12 col-lg-6">
           <div className="about-image h-100">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <Image src={cjs_illustration} alt="Commerce.js illustration"/>
+              <Image src={logo} alt="Logo illustration"/>
             </div>
           </div>
         </div>
