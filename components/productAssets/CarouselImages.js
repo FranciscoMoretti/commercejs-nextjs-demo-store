@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import { connect } from 'react-redux';
+import Image from 'next/image'
+
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  return images;
+}
+
+const importedImages = importAll(require.context('../../public/images/product', false, /\.(png|jpe?g|svg)$/));
 
 class CarouselImages extends Component {
   constructor(props) {
@@ -92,14 +101,22 @@ class CarouselImages extends Component {
               ref={image => this.carouselImages.push(image)}
               key={`carousel-side-images-${index}`}
               data-key={`carousel-side-images-${index}`}
-              className="h-56 w-48 mb-3 cursor-pointer"
+              className="h-56 w-48 mb-3 cursor-pointer d-flex align-content-center justify-content-center"
               onClick={this.onClickImage.bind(this, index)}
               style={{
-                background: `url("${image}") ${background_style}`,
                 border:
-                  index === 0 ? '2px solid #000000' : '2px solid #FFFFFF'
+                  index === 0 ? '2px solid #000000' : '2px solid #FFFFFF',
               }}
-            />
+            >
+                <div className="d-flex w-40 h-40 justify-self-center mb-auto mt-auto">
+                  <div className="some-class">
+                    <Image
+                    src={importedImages[image.split("/").pop()]}
+                    layout="responsive" className={'image'}
+                    sizes={'56px'} />
+                  </div>
+              </div>
+            </div>
           )))}
         </div>
       </div>
