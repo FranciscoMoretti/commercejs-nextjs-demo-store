@@ -8,6 +8,7 @@ import HeroSection from '../components/homepage/HeroSection';
 import HomeBanner from '../components/homepage/HomeBanner';
 import CategoryBanner from '../components/homepage/CategoryBanner';
 import ProductsBanner from '../components/homepage/ProductsBanner';
+import SuggestedProducts from '../components/productAssets/SuggestedProducts';
 
 const Home = () => (
   <Root transparentHeader={true}>
@@ -19,7 +20,8 @@ const Home = () => (
     {/* Disable HomeBanner until it's customized */}
     {/* <HomeBanner /> */}
     <CategoryBanner />
-    <ProductsBanner />
+    {/* <ProductsBanner /> */}
+    <SuggestedProducts />
     {/* Disable ExploreBanner until it's customized */}
     {/* <ExploreBanner /> */}
     {/* Disable SocialMedia until it's customized */}
