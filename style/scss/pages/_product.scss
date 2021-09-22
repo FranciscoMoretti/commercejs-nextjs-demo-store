@@ -29,7 +29,7 @@
     display: flex;
     margin: 0 4rem;
     font: fallback;
-    flex-basis: 50%;
+    flex-basis: 70%;
   }
 
   .product-detail {
@@ -49,4 +49,12 @@
       align-self: flex-start;
     }
   }
+}
+
+.product-row-centered .card-style{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.product-row-centered .card-deck{
+  justify-content: space-around;
 }
