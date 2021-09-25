@@ -20,7 +20,9 @@ class SuggestedProducts extends Component {
             Quizas te interese conocer estos productos.
           </p>
         </div>
-        <ProductRow products={products.slice(0, 4)} />
+        <div className="product-row-centered">
+          <ProductRow products={products.slice(0, 4)} />
+        </div>
       </div>
     );
   }
