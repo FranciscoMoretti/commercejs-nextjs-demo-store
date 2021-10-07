@@ -104,7 +104,7 @@ export default function Product({product}) {
           </div>
           <Collapse isOpened={showShipping}>
             <div className="pb-4 font-color-medium">
-            {product.purchase_locations}
+              <p>{product.purchase_locations}</p>
             </div>
           </Collapse>
           <div className="h-1 border-bottom border-color-black" />
@@ -117,7 +117,15 @@ export default function Product({product}) {
           </div>
           <Collapse isOpened={showDetails}>
             <div className="pb-4 font-color-medium">
-            {product.details}
+              {Array.isArray(product.details) ? (product.details.map((detail) => (
+                <p>
+                  {detail}
+                </p>
+              ))) : (
+                <p>
+                  {product.details}
+                </p>
+                )}
             </div>
           </Collapse>
           <div className="h-1 borderbottom border-color-black" />
