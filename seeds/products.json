@@ -3,7 +3,14 @@
     "id": "000000001",
     "name": "Cremoso",
     "description": "Queso Cremoso envasado por horma o por cuarto de horma",
-    "details": "Detalles del producto",
+    "details": [
+      "1- Es un queso de consistencia semi-dura.",
+      "2- Se caracteriza por su sabor láctico, suave y ligeramente salado.",
+      "3- Su textura es firme, cerrada y elástica.",
+      "4- Presenta un color que va del blanco al amarillento.",
+      "5- Su olor es delicado y agradable.",
+      "6- Se deja cortar fácilmente en cubos o fetas."
+    ],
     "purchase_locations": "En nuestro local o comuniquese con nosotros para conocer negocios con los que trabajamos en su ciudad.",
     "categories_ids": [
       "000001"
