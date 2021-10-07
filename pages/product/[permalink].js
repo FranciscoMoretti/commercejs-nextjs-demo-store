@@ -104,7 +104,7 @@ export default function Product({product}) {
           </div>
           <Collapse isOpened={showShipping}>
             <div className="pb-4 font-color-medium">
-              En nuestro local o comuniquese con nosotros para conocer negocios con los que trabajamos en su ciudad.
+            {product.purchase_locations}
             </div>
           </Collapse>
           <div className="h-1 border-bottom border-color-black" />
@@ -117,7 +117,7 @@ export default function Product({product}) {
           </div>
           <Collapse isOpened={showDetails}>
             <div className="pb-4 font-color-medium">
-              Detalles del producto { product.name }
+            {product.details}
             </div>
           </Collapse>
           <div className="h-1 borderbottom border-color-black" />
