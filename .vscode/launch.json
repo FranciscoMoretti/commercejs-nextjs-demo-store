@@ -11,16 +11,6 @@
             "url": "http://localhost:3000" // Provide your project's url to finish configuring
         },
         {
-            "name": "Docker: Attach to Node",
-            "type": "node",
-            "request": "attach",
-            "address": "localhost",
-            "localRoot": "${workspaceFolder}",
-            "remoteRoot": "/usr/src/app",
-            "protocol": "inspector",
-            "restart": true
-        },
-        {
             "name": "Server (Local)",
             "type": "node",
             "request": "launch",
