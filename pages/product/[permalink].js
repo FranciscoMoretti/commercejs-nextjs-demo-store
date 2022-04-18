@@ -9,7 +9,6 @@ import TemplatePage from '../../components/common/TemplatePage';
 import CarouselImages from '../../components/productAssets/CarouselImages';
 import ProductDetail from '../../components/productAssets/ProductDetail';
 import SuggestedProducts from '../../components/productAssets/SuggestedProducts';
-import ExploreBanner from '../../components/productAssets/ExploreBanner';
 import Footer from '../../components/common/Footer';
 import SocialMedia from '../../components/common/SocialMedia';
 import CategoryList from '../../components/products/CategoryList';
@@ -134,8 +133,6 @@ export default function Product({product}) {
     </div>
 
     <SuggestedProducts />
-    {/* Disable ExploreBanner until it's customized */}
-    {/* <ExploreBanner /> */}
     {/* Disable SocialMedia until it's customized */}
     {/* <SocialMedia /> */}
     <Footer />

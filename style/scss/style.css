@@ -2075,29 +2075,6 @@ header {
   }
 }
 
-.explore-banner .explore-banner--image {
-  background: url("/images/explore-banner.png") center center/cover;
-  padding-bottom: 100%;
-}
-
-@media (min-width: 768px) {
-  .explore-banner .explore-banner--image {
-    padding-bottom: 180%;
-  }
-}
-
-@media (min-width: 992px) {
-  .explore-banner .explore-banner--image {
-    padding-bottom: 144%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .explore-banner .explore-banner--image {
-    padding-bottom: 112%;
-  }
-}
-
 @media (min-width: 768px) {
   .collection-banner .collection-item:nth-child(odd) {
     margin-top: -3rem;
