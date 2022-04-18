@@ -2,16 +2,6 @@
 	"launch": {
 		"configurations": [
 			{
-				"name": "Docker: Attach to Node",
-				"type": "node",
-				"request": "attach",
-				"address": "localhost",
-				"localRoot": "${workspaceFolder}",
-				"remoteRoot": "/usr/src/app",
-				"protocol": "inspector",
-				"restart": true
-			},
-			{
 				"name": "Server (Local)",
 				"type": "node",
 				"request": "launch",
@@ -46,7 +36,6 @@
 	"settings": {},
 	"extensions": {
 		"recommendations": [
-			"ms-azuretools.vscode-docker"
 		]
 	}
 }
