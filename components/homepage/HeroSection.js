@@ -3,7 +3,6 @@ import { Autoplay, EffectFade, Swiper as SwiperCore } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import Link from "next/link";
-import home_1 from "../../public/images/home-1.jpg";
 import home_2 from "../../public/images/home-2.jpg";
 import home_3 from "../../public/images/home-3.jpg";
 import home_4 from "../../public/images/home-4.jpg";
@@ -22,7 +21,7 @@ const params = {
     crossFade: true,
   },
 };
-const images = [home_1, home_2, home_3, home_4];
+const images = [home_2, home_3, home_4];
 
 export default function HeroSection() {
   SwiperCore.use([Autoplay, EffectFade]);
